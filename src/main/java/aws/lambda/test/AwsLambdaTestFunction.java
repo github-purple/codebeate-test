@@ -11,6 +11,9 @@ public class AwsLambdaTestFunction extends FunctionInitializer implements Functi
 
     @Override
     public AwsLambdaTest apply(AwsLambdaTest msg) {
+        while(true) {
+            int a = 1;
+        }
          return msg;
     }
 
