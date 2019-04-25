@@ -13,6 +13,18 @@ public class AwsLambdaTestFunction extends FunctionInitializer implements Functi
     public AwsLambdaTest apply(AwsLambdaTest msg) {
         while(true) {
             int a = 1;
+            while(true) {
+                int a = 1;
+            }
+        }
+        while(true) {
+            int a = 1;
+        }
+        while(true) {
+            int a = 1;
+            while(true) {
+                int a = 1;
+            }
         }
          return msg;
     }
