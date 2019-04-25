@@ -18,4 +18,11 @@ public class AwsLambdaTestFunctionTest {
     	body.setName("aws-lambda-test");
         assertEquals("aws-lambda-test", client.apply(body).blockingGet().getName());
     }
+
+    @Test
+    public void testFunction2() throws Exception {
+        AwsLambdaTest body = new AwsLambdaTest();
+        body.setName("aws-lambda-test");
+        assertEquals("aws-lambda-test", client.apply(body).blockingGet().getName());
+    }
 }
