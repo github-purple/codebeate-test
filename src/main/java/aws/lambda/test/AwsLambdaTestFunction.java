@@ -14,16 +14,16 @@ public class AwsLambdaTestFunction extends FunctionInitializer implements Functi
         while(true) {
             int a = 1;
             while(true) {
-                int a = 1;
+                int ab = 1;
             }
         }
         while(true) {
-            int a = 1;
+            int ae = 1;
         }
         while(true) {
             int a = 1;
             while(true) {
-                int a = 1;
+                int ac = 1;
             }
         }
          return msg;
