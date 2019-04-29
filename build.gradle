@@ -6,8 +6,8 @@ plugins {
     id "net.ltgt.apt-eclipse" version "0.21"
     id "net.ltgt.apt-idea" version "0.21"
     id "application"
+    id "org.sonarqube" version "2.7"
 }
-
 
 
 version "0.1"
@@ -26,7 +26,7 @@ dependencyManagement {
 
 configurations {
     // for dependencies that are needed for development only
-    developmentOnly 
+    developmentOnly
 }
 
 dependencies {
@@ -59,7 +59,7 @@ test {
     useJUnitPlatform()
 }
 
-tasks.withType(JavaCompile){
+tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
     options.compilerArgs.add('-parameters')
 }
@@ -73,7 +73,7 @@ jar {
     }
 }
 
-if(new File("${System.getProperty("user.home")}/.aws/credentials").exists()) {
+if (new File("${System.getProperty("user.home")}/.aws/credentials").exists()) {
     task deploy(type: jp.classmethod.aws.gradle.lambda.AWSLambdaMigrateFunctionTask, dependsOn: shadowJar) {
         functionName = "aws-lambda-test"
         handler = "aws.lambda.test.AwsLambdaTestFunction::apply"
@@ -85,7 +85,6 @@ if(new File("${System.getProperty("user.home")}/.aws/credentials").exists()) {
     }
 
 }
-
 
 
 shadowJar {
